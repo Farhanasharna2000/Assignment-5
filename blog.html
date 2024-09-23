@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- google font cdn  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- font awsome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- tailwind & daisy ui cdn  -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#B4F461',
+            secondary:'rgb(17, 17, 17)',
+            secondary2:'rgba(17, 17, 17, 0.7)',
+            body:'#F9F7F3',
+          },
+          fontFamily:{
+            Lexend:'Lexend',
+          },
+        },
+      },
+    }
+  </script>
+
+</head>
+<body class=" bg-body font-Lexend">
+    <header >
+        <div class="navbar bg-body pt-9 pb-16  container mx-auto">
+            <div class="navbar-start">
+                <a id="Blog" class="btn bg-primary text-secondary text-xl font-semibold">Home</a>
+            
+            </div>
+            <div class="navbar-center ">
+                <a class="text-xl w-8 h-8 mr-2" href=""><img src="assets/logo.png" alt=""></a>
+                <a class="text-xl font-semibold">Donate Bangladesh</a>
+            </div>
+            <div class="navbar-end "> 
+                <a class="text-xl mr-2 " href=""><img src="assets/coin.png" alt=""></a>
+              <a class=" text-xl font-medium"><span>5500 </span>BDT</a>
+
+            </div>
+          </div>
+    </header>
+    <main class=" bg-white">
+<section class="container mx-auto">
+  <h1 class="text-3xl font-bold pt-9 pb-9">Important FAQ 
+    <i class="fa-regular fa-circle-question"></i>
+    </h1>      
+    <div class="join join-vertical w-full">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+              <div class="collapse-content">
+                <p class="w-10/12">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects that can be manipulated using JavaScript or other programming languages.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+              <div class="collapse-content">
+                <p class="w-10/12">Common ways to select elements:Select by ID,Select by Class Name,Select by Tag Name,Select with CSS Selectors and Select by Name Attribute</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+              <div class="collapse-content">
+                <p class="w-10/12">Event delegation is a powerful technique in JavaScript that simplifies event handling, especially when working with many elements or dynamically created content. It optimizes performance, reduces the number of event listeners, and keeps the codebase more organized.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM? </div>
+              <div class="collapse-content">
+                <p class="w-10/12">Manipulating attributes and styles using the DOM allows to dynamically control the behavior and appearance of elements on a webpage. It can change individual attributes directly, modify inline styles, or use classes to efficiently manage complex styles.</p>
+              </div>
+            </div>
+          </div>
+</section>
+    </main>
+  <script src="./js/home.js"></script>
+</body>
+</html>
