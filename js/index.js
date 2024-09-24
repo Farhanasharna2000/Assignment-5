@@ -72,7 +72,8 @@ function handleDonation(e) {
 
    
     if (inputValue <= 0 || isNaN(inputValue)||inputValue>accountBalance) {
-elementById('my_modal_1').classList.add("hidden");
+inputValueElement.value = '';
+
         alert('Wrong input value');
         return;
         
@@ -96,11 +97,11 @@ elementById('my_modal_1').classList.add("hidden");
         <p class="text-secondary text-base font-bold pb-4">${inputValue} Taka donated to ${sourceName}</p>
         <p class="text-xs text-gray-500">Date: ${new Date().toString()}</p>
     `;
-    const historyContainer = document.getElementById("history-container");
+    const historyContainer = elementById("history-container");
     if (historyContainer) {
         historyContainer.appendChild(historyItem);
     }
-
+    my_modal_1.showModal()
 }
 
 
