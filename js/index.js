@@ -79,10 +79,8 @@ inputValueElement.value = '';
         
     }
    
-
     const newTotal = totalDonation + inputValue;
     const newBalance = accountBalance - inputValue;
-
     
     totalDonationElement.innerText = newTotal.toFixed(2);
     if (accountBalanceElement) {
@@ -98,18 +96,16 @@ inputValueElement.value = '';
         <p class="text-xs text-gray-500">Date: ${new Date().toString()}</p>
     `;
     const historyContainer = elementById("history-container");
-    if (historyContainer) {
         historyContainer.appendChild(historyItem);
-    }
+        
     my_modal_1.showModal()
 }
 
-
-document.querySelectorAll('.btn[id="donation-btn"]').forEach(button => {
-    button.addEventListener('click', function () {
-        const parentSection = button.closest('section');  
-
-        handleDonation(parentSection); 
-    });
-
+document.addEventListener('click', function (event) {
+    if ( event.target.id === 'donation-btn') {
+        const parentSection = event.target.closest('section'); 
+        handleDonation(parentSection);  
+    }
 });
+
+
