@@ -1,18 +1,22 @@
+// create  getElementById function:
+
 function elementById(id){
   return  document.getElementById(id);
 }
+
+// create  innertext function:
 
 function innerText(id){
     return  parseFloat(document.getElementById(id).innerText);
 }
 
-
-const header = document.querySelector('header');
-header.classList.add('header-fixed');
+// move to blog html function:
 
 elementById("home").addEventListener('click',function(){
     window.location.href='/blog.html'
 })
+
+// history:
 
 const historyTab = elementById("history");
 const donationTab = elementById("donation");
@@ -54,6 +58,8 @@ donationTab.addEventListener('click',function(){
    
 
 //    Common function to handle donations
+
+
 function handleDonation(e) {
     const sourceName = e.querySelector('#source-name').innerText;
     const inputValueElement = e.querySelector('#input-value');
@@ -61,7 +67,7 @@ function handleDonation(e) {
     
     const inputValue = parseFloat(inputValueElement.value);
     const totalDonation = parseFloat(totalDonationElement.innerText);
-    const accountBalanceElement = document.getElementById('account-balance');
+    const accountBalanceElement = elementById('account-balance');
     const accountBalance = parseFloat(accountBalanceElement ? accountBalanceElement.innerText : 0);
 
    
@@ -106,5 +112,3 @@ document.querySelectorAll('.btn[id="donation-btn"]').forEach(button => {
     });
 
 });
-
-   
