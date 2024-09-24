@@ -1,7 +1,7 @@
 // move to blog html function:
 
 elementById("home").addEventListener('click',function(){
-    window.location.href='/blog.html'
+    window.location.href='../blog.html'
 })
 
 
