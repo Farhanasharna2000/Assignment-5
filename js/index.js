@@ -30,6 +30,8 @@ historyTab.addEventListener('click',function(){
     donationTab.classList.add("bg-white","text-secondary2");
     document.getElementById("history-container").classList.remove("hidden");
     document.getElementById("card-container").classList.add("hidden");
+    document.getElementById("footer").classList.add("hidden");
+
 }
 )
 
@@ -49,51 +51,9 @@ donationTab.addEventListener('click',function(){
 
 }
 )
-
-// card-1
-
-// const donationBtn = elementById('donation-btn').addEventListener('click',function () {
-//     const name = elementById('source-name').innerText;
-//     const accountBalance = innerText('account-balance');
-//     const totalDonation = innerText('total-donation');
-
-//     const inputValue = parseFloat (elementById('input-value').value);
-//     if (inputValue<=0 || isNaN(inputValue||inputValue>accountBalance)) {
-//         elementById("my_modal_1").classList.add('hidden');
-
-//        return alert('wrong input value');
-
-//     }
-
-//     elementById('close').addEventListener('click',function (){
-
-//         elementById('input-value').value = ""; 
-//     })
-   
-//     const total = totalDonation + inputValue;
-//     const balance = accountBalance - inputValue;
-//     const totalAmount = elementById('total-donation')
-//     totalAmount.innerText = total.toFixed(2);
-//     const remainingBalance = elementById('account-balance')
-//     remainingBalance.innerText = balance.toFixed(2);
-
-    
-
-//         const historyItem = document.createElement('div');
-//         historyItem.className="border rounded-xl p-8  mb-8 ";
-//         historyItem.innerHTML=`
-//         <p class = "text-secondary text-base font-bold pb-4">${inputValue} Taka is ${name}</p>
-//         <p class="text-xs text-gray-500">Date: ${new Date().toString()}</p>
-//         `;
-//         const historyContainer = elementById("history-container");
-
-// historyContainer.appendChild(historyItem)
-// })
-
-   // card-2
    
 
-   // Common function to handle donations
+   Common function to handle donations
 function handleDonation(e) {
     const sourceName = e.querySelector('#source-name').innerText;
     const inputValueElement = e.querySelector('#input-value');
@@ -108,10 +68,10 @@ function handleDonation(e) {
     if (inputValue <= 0 || isNaN(inputValue)||inputValue>accountBalance) {
 
         alert('Wrong input value');
-        elementById("my_modal_1").classList.add('hidden');
         return;
         
     }
+   
 
     const newTotal = totalDonation + inputValue;
     const newBalance = accountBalance - inputValue;

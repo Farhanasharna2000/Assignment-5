@@ -37,20 +37,11 @@
       },
     }
   </script>
-<style>
-  .header-sticky {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  box-shadow:0 0 10px 0 black ;
-}
-</style>
+
 </head>
 
 <body class=" bg-body font-Lexend">
-  <header class="header-sticky">
+  <header class="sticky top-0 left-0 right-0 z-10 drop-shadow-xl  ">
    <nav class="bg-body">
     <div class="navbar  pt-9 pb-16 container mx-auto">
       <div class="navbar-start">
@@ -109,9 +100,9 @@
 
             <div class="form-control mt-6">
 
-              <button id="donation-btn" class="btn bg-primary text-secondary "
+              <button id="donation-btn" class="btn bg-primary text-secondary " 
                 onclick="my_modal_1.showModal()">DonateNow</button>
-              <dialog id="my_modal_1" class="modal">
+              <dialog  id="my_modal_1" class="modal ">
                 <div class="modal-box flex flex-col justify-center items-center">
                   <h3 class="text-5xl font-bold">Congrates!</h3>
                   <img class="pt-8 pb-8 w-12  mx-auto" src="assets/coin.png" alt="">
@@ -299,7 +290,7 @@
     </div>
 
   </main>
-  <footer class="bg-body h-32"></footer>
+  <footer id="footer" class="bg-body h-32"></footer>
   <script src="./js/index.js"></script>
 </body>
 
