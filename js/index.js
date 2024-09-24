@@ -53,7 +53,7 @@ donationTab.addEventListener('click',function(){
 )
    
 
-   Common function to handle donations
+//    Common function to handle donations
 function handleDonation(e) {
     const sourceName = e.querySelector('#source-name').innerText;
     const inputValueElement = e.querySelector('#input-value');
@@ -66,13 +66,12 @@ function handleDonation(e) {
 
    
     if (inputValue <= 0 || isNaN(inputValue)||inputValue>accountBalance) {
-
+elementById('my_modal_1').classList.add('hidden');
         alert('Wrong input value');
         return;
         
     }
    
-
     const newTotal = totalDonation + inputValue;
     const newBalance = accountBalance - inputValue;
 
